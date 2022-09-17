@@ -28,7 +28,7 @@ export default function Textform(props) {
   return (
     <>
     <div  className="container" >
-        <h1 className={`text-${props.mode==='light'?'black':'white'}`}>ENTER TEXT</h1>
+        <h1 className={` text-${props.mode==='light'?'black':'white'}`}>Word Counter ,Convert To Upper And Lower Case </h1>
       <div className="mb-3">
         <textarea className={`form-control text-${props.mode==='light'?'black':'white'}`}   value={text} onChange={handleOnchange} id="exampleFormControlTextarea1" rows="6"  style={{backgroundColor:props.mode==='light'?'white':'#41556a'}}>
 
@@ -36,15 +36,15 @@ export default function Textform(props) {
       </div>
     </div>
     <div className="container ">
-       <button className="btn btn-success my-1 mx-1" onClick={toUppercase} >CONVERT to UPPERCASE</button>
-       <button className="btn btn-success my-1 mx-1" onClick={toLowercase }>CONVERT TO LOWERCASE</button>
-       <button className="btn btn-success my-1 mx-1" onClick={clearText}>CLEAR TEXT</button>
+       <button disabled={text.length==0} className="btn btn-success my-1 mx-1" onClick={toUppercase} >CONVERT to UPPERCASE</button>
+       <button disabled={text.length==0} className="btn btn-success my-1 mx-1" onClick={toLowercase }>CONVERT TO LOWERCASE</button>
+       <button disabled={text.length==0} className="btn btn-success my-1 mx-1" onClick={clearText}>CLEAR TEXT</button>
        </div>
     {/* <div className="container my-3"> */}
     <div className={` container  my-3 text-${props.mode==='light'?'black':'white'}`}>
 
     <h1>Summary</h1>
-    <p>{text.split(" ").length-1} words and {text.length} characters</p>
+    <p>{text.split(" ").filter((Element)=>{return Element.length!=0}).length} words and {text.length} characters</p>
     <h2>preview</h2>
     <p>{text}</p>
     </div>

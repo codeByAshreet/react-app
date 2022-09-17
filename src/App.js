@@ -32,10 +32,10 @@ function App() {
   return (
     <>
       <Navbar mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
+      <Alert alert={alert}   />
 
       <div className="container my-3">
-        <Textform mode={mode} showAlert={showAlert} toggleMode={toggleMode} />
+        <Textform mode={mode} showAlert={showAlert} toggleMode={toggleMode}/>
       
       </div>
       <Card heading="CARDS" mode={mode} />
