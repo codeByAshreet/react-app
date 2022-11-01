@@ -38,7 +38,7 @@ function App() {
         <Textform mode={mode} showAlert={showAlert} toggleMode={toggleMode}/>
       
       </div>
-      <Card heading="CARDS" mode={mode} />
+      {/* <Card heading="CARDS" mode={mode} /> */}
     </>
   );
 }

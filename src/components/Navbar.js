@@ -15,10 +15,10 @@ export default function Navbar(props) {
           <li className="nav-item">
             <a className={`nav-link text-${props.mode==='light'?'dark':'white'}`} aria-current="page" href="#">Home</a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a className={`nav-link text-${props.mode==='light'?'dark':'white'}`} href="#">Card</a>
           </li>
-          
+           */}
       
         </ul>
         {/* <form className="d-flex" role="search">
